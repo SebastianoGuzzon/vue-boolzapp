@@ -5,19 +5,155 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Link CSS VUE E FONT-AWESOME -->
+  <!-- Link CSS VUE FONT-AWESOME -->
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
 
   <title>Boolzap</title>
 </head>
 <body>
   
+    <div id="app">
+      <!-- wrap principale -->
+      <div class="main-wrap">
 
-  
+        <!-- PARTE SINISTRA -->
+        <div class="wrap-left">
 
+            <!-- top -->
+            <div class="wrap-top">
+              <!-- parte sinstra: utente -->
+              <div class="user-info">
+                  <div class="user-image">
+                    <img>
+                  </div>
+                  <div class="user-text">
+                    <h4></h4>
+                  </div>
+              </div>
+
+              <!-- parte destra: icone -->
+              <div class="items">
+                  <i class="fas fa-circle-notch"></i>
+                  <i class="fas fa-comment-alt"></i>
+                  <i class="fas fa-ellipsis-v"></i>
+              </div>
+            </div>
+
+
+            <!-- notifiche -->
+            <div class="notifiche">
+              <div class="item-bg">
+                  <i class="far fa-bell-slash"></i>
+              </div>
+              <div class="item-text">
+                  <h4>Ricevi notifiche di nuovi messaggi</h4>
+                  <p>Attiva notifiche desktop</p>
+              </div>   
+            </div>
+
+
+            <!-- input -->
+            <!-- Inserisco input box -->
+            <div class="input-box">
+              <div class="search-icon">
+                  <i class="fas fa-search"></i>
+              </div>
+              <input 
+                  type="text" 
+                  placeholder="Crea o inizia una nuova chat"
+                  v-model.trim="inputValue"
+                  @keyup="typeLetter()"
+              >
+              
+            </div>
+
+
+            <!-- Chat-list -->
+            <div class="chat-list">
+              <ul>
+                  <li>
+                    <div class="user-info">
+                        <div class="user-image">
+                          <img>
+                        </div>
+                        <div class="user-text">
+                          <h4></h4>
+                          <p></p>
+                        </div>
+                        <p></p>
+                    </div> 
+                  </li>
+              </ul>
+            </div>
+
+        </div>
+
+        
+        <!-- PARTE DESTRA -->
+        <div class="wrap-right">
+
+            <!-- top -->
+            <div class="wrap-top">
+              <!-- parte sinstra: utente -->
+
+              <!-- utente visualizzato deve essere quello attivo! -->
+              <div class="user-info">
+                  <div class="user-image">
+                    <img>
+                  </div>
+                  <div class="user-text">
+                    <h4></h4>
+                    
+                  </div>
+              </div>
+
+              <!-- parte destra: icone -->
+              <div class="items">
+                  <i class="fas fa-search"></i>
+                  <i class="fas fa-paperclip"></i>
+                  <i class="fas fa-ellipsis-v"></i>
+              </div>
+            </div>
+
+
+            <!--  parte centrale: chat-box -->
+
+            <div class="chat-box">
+              <div>
+                  <div 
+                    class="single-message"
+                    
+                    <p></p>
+                    <i class="fas fa-chevron-down">
+                    </i>
+                    <div 
+                        class="menu-box"
+                    >
+                        <p>Message info</p>
+
+                    </div>
+                  </div>
+                  
+              </div>
+
+            </div>
+
+
+            <!--  input sotto per scrivere testo -->
+            <div class="wrap-bottom">
+              <i class="far fa-smile"></i>
+              <input 
+                  type="text" 
+                  placeholder="scrivi un messaggio"
+              >
+              <i class="fas fa-microphone"></i>
+            </div>
+        </div>
+      </div>
+  </div>
+ 
   <script src="js/script.js"></script>
 </body>
 </html>
