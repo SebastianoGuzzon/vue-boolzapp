@@ -15,8 +15,8 @@
     <title>Boolzap</title>
     </head>
 <body>
-  
-  <div id="app">
+
+<div id="app">
     <div class="background_webApp d-flex justify-content-center align-items-center">
         <div class="boolzap_window d-flex">
             <div class="left_column">
@@ -47,6 +47,9 @@
                 <div class="search_chat p-2">
                     <input class="input_search border-0 rounded-1 shadow-sm" type="search" placeholder="               Cerca o inizia una nuova chat">
                 </div>
+
+                <!-- Click sul contatto mostra la conversazione del contatto cliccato -->
+
                 <div class="user_list" :class="index === activeContact ? 'active' : ''" @click="activeContact = index"  v-for="(contact, index) in contacts">
                     <div class="user_section p-2 d-flex justify-content-between border-bottom default">
                         <div class="user_image_txt_container d-flex">
@@ -83,7 +86,6 @@
                 </div>
                 
                 <!-- Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione -->
-                <!-- Click sul contatto mostra la conversazione del contatto cliccato -->
                 
                 <div class="messages_section d-flex flex-column p-4">
                     <div class="my_message p-2 rounded-2 mt-2" :class="{ my_message : message.status == 'sent', user_message : message.status == 'received' }" v-for="message in contacts[activeContact].messages">
