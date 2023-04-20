@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root{
   --dark-green:#009688;
   --light-green: #D5F9BA;

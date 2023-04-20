@@ -5,7 +5,7 @@ createApp({
         return {
             activeContact: 0,
             newMessage: '',
-        contacts: [
+            contacts: [
             {
                 name: 'Michele',
                 avatar: './assets/img/avatar_1.jpg',
@@ -173,11 +173,12 @@ createApp({
         //   **Milestone 2**
         // Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
         // Click sul contatto mostra la conversazione del contatto cliccato
+        
     methods:{
-      methods: {
+    methods: {
         activeChat() {
             this.activeContact ++
-          }
+        }
     }
     }  }).mount('#app')
     
