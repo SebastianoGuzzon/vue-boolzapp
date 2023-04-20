@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root{
   --dark-green:#009688;
   --light-green: #D5F9BA;
@@ -10,7 +16,7 @@
 }
 
 .background_webApp{
-  background-image: url('../img/mine.jpg');
+  background-color: #D7DBD6;
   height: 100vh;
 }
 
